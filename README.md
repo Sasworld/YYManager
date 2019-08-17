@@ -1,2 +1,5 @@
 # YYManager
 虚拟货币交易平台对应的管理项目
+
+主要用于对YYZJ平台中数据的维护和管理
+配置好YYZJ后只需要修改项目中的php\conSql.php中的设置即可,数据库与YYZJ相同
