@@ -1,0 +1,27 @@
+.div_query_type{
+	display: inline;
+	margin-top: 50px;
+	line-height: 40px;
+}
+.div_query_type span{
+	display: inline;
+	float: left;
+	margin-left: 40px;
+	font-size: 1vw;
+	margin-top: 20px;
+}
+
+.select_query_record_type{
+	height: 40px;
+	width: 300px;
+	padding: 3px;
+	float: left;
+	border: 1px solid #aaa;
+	outline:none;
+	margin-top: 20px;
+}
+
+.select_query_record_type option{
+	height: 30px;
+	font-size: 1vw;
+}

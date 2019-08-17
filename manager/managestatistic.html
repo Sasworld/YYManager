@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/statistic.css"/>
+		<script src="js/statistic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			check_login_state();
+		</script>
+	</head>
+	<body>
+		<div id="div_sta_main" class="div_sta_main">
+			<div class="div_data_sta">
+				<span class="theme_txt_color">网站数据统计</span>
+				<input type="button" id="refresh_sta" value="刷新" class="btn_refresh_sta theme_btn_bg_hover" onclick="refresh_sta()"/>
+				<div class="page_sta_content">
+					<ul>
+						<li><span>排单总额：</span><span id="total_paidan"></span></li>
+						<li><span>今日排单总额：</span><span id="today_total_paidan"></span></li>
+					</ul>
+					<ul>
+						<li><span>交割总额：</span><span id="total_jiaoge"></span></li>
+						<li><span>今日交割总额：</span><span id="today_total_jiaoge"></span></li>
+					</ul>
+					<ul>
+						<li><span>提现总额：</span><span id="total_tixian"></span></li>
+						<li><span>今日提现总额：</span><span id="today_total_tixian"></span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="div_data_sta">
+				<span class="theme_txt_color">网站数据设置</span>
+				<div class="page_sta_content">
+					<ul>
+						<li><span>优选区最大显示单量：</span><input type="text" name="best_max_paidan" id="best_max_paidan" value="" /></span></li>
+						<li><span>随机区最大显示单量：</span><input type="text" name="rand_max_paidan" id="rand_max_paidan" value="" /></span></li>
+						<li><span>官方微信号：</span><input type="text" name="wechat" id="wechat" value="" /></span></li>
+					</ul>
+					<input type="button" id="submit_alter_sta" value="更新设置" class="submit_alter_sta theme_btn_bg_hover" onclick="update_setting()"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

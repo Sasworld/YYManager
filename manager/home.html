@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>昱缘之家后台管理</title>
+		<!--引入外部js控制文件-->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/home.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link href="css/home.css" rel="stylesheet" style="text/css"/>
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/oprecord.css"/>
+		<link rel="stylesheet" type="text/css" href="css/statistic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/trade.css"/>
+		<script type="text/javascript">
+			check_login_state();
+		</script>
+	</head>
+	<body style="min-width: 960px;">
+		<div id="div_main_page" class="div_main_page"><!--主框架-->                                           
+			<div id="div_main_title" class="div_main_title"><!--头标题-->   
+				<div class="div_title_common" style="margin-top: 20px;margin-left: 10px;">
+					<img src="imgs/logo.jpg" class="img_logo"/>
+				</div>
+				<!--放置系统名称-->
+				<div id="div_sys_name" class="div_title_common div_title_sys_name">
+				</div>
+				<!--放置用户登录标志，用于退出系统-->
+				<div id="div_title_user" class="div_title_user">
+					<table border="1" id="detailTable" class="table_mdhome">
+					<tr>
+						<td width="120" class="td_mdhome" id="username"></td>
+						<td width="120" class="td_mdhome theme_txt_hover" onclick="quit_account()">退出</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+			<div id="div_main_middle" class="div_main_middle">
+				<!--左侧的导航栏布局-->
+				<div id="div_left_content" class="inlinediv div_left_content">
+					<div id="member_manage" class="div_leftbtn" onclick="showPage(this)">
+						<img id="img_member" src="imgs/member_down.png" class="img_leftbtn" /><br />
+						<label id="label_member" class="label_leftbtn" style="color: #FF9900;">会员管理</label>
+					</div>
+					<!--margin:0 auto;设置div水平居中-->
+					<div id="manage_trade" class="div_leftbtn" onclick="showPage(this)">
+						<img id="img_trade" src="imgs/trade_up.png" class="img_leftbtn" /><br />
+						<label id="label_trade" class="label_leftbtn">交易管理</label>
+					</div>
+					<div id="statistic" class="div_leftbtn" onclick="showPage(this)">
+						<img id="img_statistic" src="imgs/statistic_up.png" class="img_leftbtn" /><br />
+						<label id="label_statistic" class="label_leftbtn">数据管理</label>
+					</div>
+					<div id="op_record" class="div_leftbtn" onclick="showPage(this)">
+						<img id="img_op_record" src="imgs/order_up.png" class="img_leftbtn" /><br />
+						<label id="label_op_record" class="label_leftbtn">操作记录</label>
+					</div>
+				</div>
+				<!--右侧的详细内容展示的布局-->
+				<div id="div_main_content" class="inlinediv div_main_content">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var see_height = $(window).height();
+	$('#div_main_page').css("height", see_height + "px");
+	$("#div_main_content").load( "memberlist.html", function( response, status, xhr ) {
+		$("#div_main_content").html(response);
+		if(status == "success"){
+			get_member_information("1", "");
+		}
+	});
+</script>

@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+	overflow: hidden;
+	/*overflow娓呴櫎娴姩*/
+}
+
+th{
+	font-weight: 500;
+	font-size: 16px;
+	border-right-style:none;
+	height: 50px;
+	border: 0.5px solid #b5b5b5;
+	
+}
+td{
+	color: #666666;
+	font-size: 14px;
+	height: 50px;
+	border-right-style:none;
+	border-left-style:none;
+	border-top-style:none;
+}
+.div_main_page{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/*border:5px solid blue;*/
+}
+.div_main_title{
+	height: 12%;
+	overflow: hidden;
+}
+.div_main_middle{
+	height: 87%;
+	/*border:2px solid darkslategray;*/
+}
+.div_left_content{
+	text-align: center;
+	float: left;
+	width: 10%;
+	height: 100%;
+	background-color: #000022;
+	color: white;
+	padding-top: 20px;
+}
+.div_main_content{
+	float: left; 
+	margin-left: 1%;
+	width: 88%;
+	height: 100%;
+	border:1px solid #aaa;
+}
+.div_leftbtn{
+	height: 80px;
+	width: 80px;
+	margin:0 auto;
+	cursor: pointer;
+}
+.img_leftbtn{
+	width: 50px;
+	height: 50px;
+}
+.label_leftbtn{
+	height: 25px;
+	font-size: 14px;
+	color: #8a8a8a;
+}
+.div_title_common{
+	display: inline;
+	float: left;
+}
+.img_logo{
+	width: 150px;
+	height: 50px;
+	display: inline;
+}
+.span_title{
+	font-size: 30px;
+	color: gray;
+}
+.div_title_sys_name{
+	margin-top: 25px;
+	margin-left: 10px;
+	text-align: center;
+}
+.div_title_user{
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+img{
+	vertical-align:middle;
+	height: 18px;
+	width: 18px;
+}
+.table_mdhome{
+	border-collapse:separate; 
+	border-spacing:0px 0px;
+	border: 0px solid #b5b5b5;
+	text-align: center;
+}
+.td_mdhome{
+	font-size: 1vw;
+	height: 30px;
+	border:none;
+	cursor: pointer;
+}
+.td_mdhome:hover{
+	color: #258ff1;
+}

@@ -1,0 +1,51 @@
+.theme_bg_color{
+	background-color: #FF9900;
+}
+
+.theme_txt_color{
+	color: #FF9900;
+}
+
+.hidden_element{
+	display: none;
+}
+
+.theme_txt_hover{
+	color: #FF9900;
+}
+
+.theme_txt_hover:hover{
+	color: #DD8500;
+}
+
+.theme_btn_bg_hover{
+	background-color: #FF9900;
+}
+
+.theme_btn_bg_hover:hover{
+	background-color: #EE8F00;
+	color: #ddd;
+}
+
+.no_data_tip{
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+}
+
+.no_data_tip img{
+	width: 180px;
+	height: 120px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+.no_data_tip span{
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	font-size-adjust: 1.2vw;
+}

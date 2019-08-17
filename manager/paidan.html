@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script src="js/paidan.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<script type="text/javascript">
+			check_login_state();
+		</script>
+	</head>
+	<body>
+		<div id="div_palist_main" class="div_palist_main">
+			<input id="order" type="button" class="btn_member_list" value="交割订单" onclick="tab_page(this)"/><input id="manage_order" type="button" class="btn_member_list theme_txt_color" value="管理员订单" onclick="tab_page(this)"/><input id="paidan" type="button" class="btn_member_list theme_txt_color theme_bg_color" value="排单" onclick="tab_page(this)"/>
+			<div id="div_memberlist_content" class="div_memberlist_content">
+				<div class="div_search_tool">
+					<input type="text" id="text_search_paidan" class="text_search_member" placeholder="会员账户/会员手机号"/>
+					<img src="imgs/search.png" class="img_search" onclick="search_paidan()"/>
+				</div>
+				<table border="1" id="table_paidan_list" class="table_member_list">
+					<tr>
+						<th width="10%">排单编号</th>
+						<th width="15%">排单账号</th>
+						<th width="15%">手机号</th>
+						<th width="10%">排单数量</th>
+						<th width="10%">已交割数</th>
+						<th width="10%">排单状态</th>
+						<th width="20%">排单日期</th>
+						<th width="10%">操作</th>
+					</tr>
+				</table>
+				<div class="no_data_tip" id="no_data_tip">
+					<img src="imgs/nodata.png"/>
+					<span class="theme_txt_color">暂无数据...</span>
+				</div>
+			</div>
+		</div>
+		<div id="mask_memberlist" class="mask_memberlist">
+			
+		</div>
+		<!-- 充值弹窗 -->
+		<div id="popwindow_recharge" class="popwindow_recharge">
+			<span class="span_recharge_title theme_txt_color">
+				会员充值
+			</span>
+			<img src="imgs/close.png" id="img_close_pop" class="img_close_pop" onclick="close_recharge()"/>
+			<input type="text" id="recharge_amount" value="" placeholder="输入充值金额" class="text_recharge_amount" />
+			<div class="btn_opreate">
+				<span class="span_recharge_type theme_txt_color">选择充值类型: </span>
+				<input type="radio" name="recharge_radio" id="radio" value="1" /><span class="span_recharge_option">本金</span>
+				<input type="radio" name="recharge_radio" id="radio" value="2" /><span class="span_recharge_option">排单币</span>
+				<input type="radio" name="recharge_radio" id="radio" value="3" /><span class="span_recharge_option">激活码</span>
+			</div>
+			<input type="button" id="btn_cancel_alter" value="充 值" class="btn_recharge theme_bg_color" onclick="submit_recharge()"/>
+		</div>
+	</body>
+</html>

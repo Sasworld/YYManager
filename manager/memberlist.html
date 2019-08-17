@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script src="js/memberlist.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			check_login_state();
+		</script>
+	</head>
+	<body>
+		<div id="div_palist_main" class="div_palist_main">
+			<input id="allmember" type="button" class="btn_member_list theme_bg_color" value="全部会员" onclick="tab_page(this)"/><input id="newmember" type="button" class="btn_member_list theme_txt_color" value="今日新增" onclick="tab_page(this)"/>
+			<div id="div_memberlist_content" class="div_memberlist_content">
+				<div class="div_member_amount theme_txt_color">
+					<span>会员总数:</span>
+					<span id="span_member_amount"></span>
+				</div>
+				<div class="div_search_tool">
+					<input type="text" id="text_search_member" class="text_search_member" placeholder="会员账户/会员手机号"/>
+					<img src="imgs/search.png" class="img_search" onclick="search_member()"/>
+				</div>
+				<table border="1" id="table_member_list" class="table_member_list">
+					<tr>
+						<th width="10%">账号</th>
+						<th width="10%">手机号</th>
+						<th width="10%">领导人</th>
+						<th width="8%">本金</th>
+						<th width="8%">星级</th>
+						<th width="8%">排单币</th>
+						<th width="8%">激活码</th>
+						<th width="15%">注册日期</th>
+						<th width="8%">账号状态</th>
+						<th width="15%">操作</th>
+					</tr>
+				</table>
+				<div class="no_data_tip" id="no_data_tip">
+					<img src="imgs/nodata.png"/>
+					<span class="theme_txt_color">暂无数据...</span>
+				</div>
+			</div>
+		</div>
+		<div id="mask_memberlist" class="mask_memberlist">
+			
+		</div>
+		<!-- 会员详细信息 -->
+		<div id="popwindow_member_info" class="popwindow_member_info">
+			<span class="span_alter_title theme_txt_color">
+				会员信息
+			</span>
+			<img src="imgs/close.png" id="img_close_pop" class="img_close_pop" onclick="close_pop()"/>
+			<ul>
+				<li><input type="text" id="member_name" class="edit_text_member_info" disabled="disabled"/><span>账号：</span></li>
+				<li><input type="text" id="member_tel" class="edit_text_member_info" disabled="disabled"/><span>手机号：</span></li>
+				<li><input type="text" id="member_principal" class="edit_text_member_info" disabled="disabled"/><span>本金：</span></li>
+				<li><input type="text" id="member_bonus" class="edit_text_member_info" disabled="disabled"/><span>奖金：</span></li>
+				<li><input type="text" id="member_parentname" class="edit_text_member_info" disabled="disabled"/><span>领导人：</span></li>
+				<li><input type="text" id="member_stars" class="edit_text_member_info" disabled="disabled"/><span>星级：</span></li>
+				<li><input type="text" id="member_pdcoin" class="edit_text_member_info" disabled="disabled"/><span>排单币：</span></li>
+				<li><input type="text" id="member_accode" class="edit_text_member_info" disabled="disabled"/><span>激活码：</span></li>
+				<li><input type="text" id="member_bank" class="edit_text_member_info" disabled="disabled"/><span>银行：</span></li>
+				<li><input type="text" id="member_subbank" class="edit_text_member_info" disabled="disabled"/><span>支行：</span></li>
+				<li><input type="text" id="member_banknumber" class="edit_text_member_info" disabled="disabled"/><span>银行卡号：</span></li>
+				<li><input type="text" id="member_ownername" class="edit_text_member_info" disabled="disabled"/><span>持卡人：</span></li>
+				<li><input type="text" id="member_alipay" class="edit_text_member_info" disabled="disabled"/><span>支付宝：</span></li>
+				<li><input type="text" id="member_state" class="edit_text_member_info" disabled="disabled"/><span>账号状态：</span></li>
+				<li><input type="text" id="member_register_date" class="edit_text_member_info" disabled="disabled"/><span>注册日期：</span></li>
+			</ul>
+			<div class="btn_opreate">
+				<input type="button" id="btn_edit_member_info" value="更改会员信息" class="btn_alter_member_info theme_btn_bg_hover" onclick="edit_member_info()"/>
+				<input type="button" id="btn_confirm_alter" value="确认修改" class="btn_alter_member_info theme_btn_bg_hover hidden_element" onclick="confirm_alter()"/>
+				<input type="button" id="btn_cancel_alter" value="取消" class="btn_alter_member_info theme_btn_bg_hover hidden_element" onclick="cancel_alter()"/>
+			</div>
+		</div>
+		<!-- 充值弹窗 -->
+		<div id="popwindow_recharge" class="popwindow_recharge">
+			<span class="span_recharge_title theme_txt_color">
+				会员充值
+			</span>
+			<img src="imgs/close.png" id="img_close_pop" class="img_close_pop" onclick="close_recharge()"/>
+			<input type="text" id="recharge_amount" value="" placeholder="输入充值金额" class="text_recharge_amount" />
+			<div class="btn_opreate">
+				<span class="span_recharge_type theme_txt_color">选择充值类型: </span>
+				<input type="radio" name="recharge_radio" id="radio" value="1" checked="checked" /><span class="span_recharge_option">排单币</span>
+				<input type="radio" name="recharge_radio" id="radio" value="2" /><span class="span_recharge_option">激活码</span>
+			</div>
+			<input type="button" id="btn_cancel_alter" value="充 值" class="btn_recharge theme_bg_color" onclick="submit_recharge()"/>
+		</div>
+	</body>
+</html>

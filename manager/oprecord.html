@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script src="js/trade.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/oprecord.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/memberlist.css"/>
+		<link rel="stylesheet" type="text/css" href="css/oprecord.css"/>
+		<script type="text/javascript">
+			check_login_state();
+		</script>
+	</head>
+	<body>
+		<div id="div_palist_main" class="div_palist_main">
+			<div id="div_memberlist_content" class="div_memberlist_content">
+				<div class="div_query_type">
+					<span>类别：</span>
+					<select id="select_query_record_type" class="select_query_record_type">
+						<option></option>
+						<option>提现</option>
+						<option>激活码转账</option>
+						<option>排单币转账</option>
+						<option>排单币充值</option>
+						<option>激活码充值</option>
+						<option>未确认收款罚款</option>
+					</select>
+				</div>
+				<div class="div_search_tool">
+					<input type="text" id="text_search_oprecord" class="text_search_member" placeholder="会员账户/会员手机号"/>
+					<img src="imgs/search.png" class="img_search" onclick="search_oprecord()"/>
+				</div>
+				<table border="1" id="table_oprecord_list" class="table_member_list">
+					<tr>
+						<th width="15%">会员账号</th>
+						<th width="15%">手机号</th>
+						<th width="10%">操作类型</th>
+						<th width="10%">被操作编号</th>
+						<th width="30%">备注</th>
+						<th width="20%">操作日期</th>
+					</tr>
+				</table>
+				<div class="no_data_tip" id="no_data_tip">
+					<img src="imgs/nodata.png"/>
+					<span class="theme_txt_color">暂无数据...</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

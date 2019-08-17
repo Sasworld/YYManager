@@ -1,0 +1,277 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.div_palist_main{
+	width: 97%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.btn_member_list{
+    border: 0px;
+    height: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    cursor: pointer;
+    color: white;
+}
+
+.div_memberlist_content{
+	height: 94%;
+	border: 1px solid #aaa;
+	overflow-y:auto;
+}
+
+.div_member_amount{
+	float: left;
+	margin-left: 40px;
+	margin-top: 2%;
+	font-size: 1.5vw;
+	font-weight: 500;
+}
+
+.div_search_tool{
+	height: 40px;
+	margin-top: 2%;
+	float: right;
+	margin-right: 40px;
+	border: 1px solid #aaa;
+}
+
+.img_search{
+	width: 40px;
+	height: 40px;
+	float: left;
+	cursor: pointer;
+}
+
+.text_search_member{
+	height: 30px;
+	width: 300px;
+	padding: 3px;
+	padding-top: 5px;
+	padding-left: 10px;
+	float: left;
+	border: 0px;
+	outline:none;
+}
+
+/* ======================== 会员列表 ===========================*/
+.table_member_list{
+	width: 100%;
+	margin-top: 7%;
+	border-collapse:separate; 
+	border-spacing:0px 0px;
+	border: 0px solid #b5b5b5;
+	text-align: center;
+}
+
+/*表格隔行变色*/
+.table_member_list tr:nth-child(even){
+	background: #ddd;
+}
+.table_member_list tr:nth-child(n+2):hover{
+	background: #aaa;
+}
+/*.table_member_list tr:nth-child(even):hover{
+	background: #eee;
+}*/
+
+.table_member_list th{
+	font-size: 1vw;
+	height: 40px;
+	border: 1px solid #aaa;
+	border-left: 0px;
+	
+}
+
+.table_member_list td{
+	font-size: 0.8vw;
+	height: 40px;
+}
+
+.span_palist{
+	color: #258ff1;
+	font-size: 14px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.select_diseasename{
+	height: 30px;
+	width: 200px;
+}
+
+.span_operate{
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+/*======================     蒙版            ===========================*/
+.mask_memberlist{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #000;
+	z-index: 10;
+	opacity: 0.5;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+/*====================== 会员信息弹出框 ===========================*/
+.popwindow_member_info{
+	position: absolute;
+	width:900px;
+	height: 500px;
+	overflow-y: auto;
+	top: 20px;
+	left: 200px;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-left: 1%;
+	z-index: 11;
+	display: none;
+	padding-top: 10px;
+}
+
+.span_alter_title{
+	font-size: 1.5vw;
+	margin-top: 10px;
+	margin-left: 45%;
+	font-weight: 600;
+}
+
+.popwindow_member_info ul{
+	width: 90%;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	margin-top: 60px;
+}
+
+.popwindow_member_info ul li{
+	width: 45%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 5px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+.popwindow_member_info ul li span{
+	display: block;
+	float: right;
+	margin-right: 3%;
+}
+
+.edit_text_member_info{
+	width: 65%;
+	display: block;
+	float: right;
+	height: 20px;
+	font-size: 1vw;
+	border: 1px solid #aaa;
+	padding: 5px;
+	padding-left: 15px;
+	border-radius: 5px;
+}
+
+.img_close_pop{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px;
+}
+
+.btn_opreate{
+	text-align: center;
+	margin-top: 20px;
+	outline:none;
+}
+
+.btn_alter_member_info{
+    border: none;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none;
+}
+
+/* ============================ 充值弹窗 ==============================*/
+.popwindow_recharge{
+	position: absolute;
+	width:450px;
+	height: 300px;
+	top: 20px;
+	left: 200px;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+	z-index: 11;
+	display: none;
+	padding-top: 10px;
+}
+
+.span_recharge_title{
+	font-size: 1.5vw;
+	margin-top: 10px;
+	margin-left: 40%;
+	font-weight: 600;
+}
+
+.text_recharge_amount{
+	padding: 5px;
+	padding-left: 15px;
+	height: 20px;
+	border: 1px solid #aaa;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+.btn_opreate{
+	line-height: 10px;
+	outline:none;
+}
+
+.btn_opreate input{
+	margin-left: 10px;
+	outline:none;
+}
+
+.span_recharge_type{
+	font-size: 1vw;
+}
+
+.span_recharge_option{
+	font-size: 1vw;
+	margin-left: 5px;
+}
+
+.btn_recharge{
+	display: block;
+	border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 40px;
+    outline:none;
+}
